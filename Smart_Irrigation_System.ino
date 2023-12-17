@@ -1,4 +1,4 @@
-#include <LiquidCrystal_I2C.h>
+#include <LiquidCrystal_I2C.h> // Using LCD package, to display water level on LCD Display
 #include "DHT.h" // Using the DHT module to check temperature and humidity
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 #define DHTPIN 2 
