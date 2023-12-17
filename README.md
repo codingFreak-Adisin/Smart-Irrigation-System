@@ -15,4 +15,6 @@ Components Used:
 5) Bluetooth Module
 6) Relay Module
 7) A Motor
-8) 2 9v batteries, a plastic pipe, and some jumper wires
+8) Breadboard
+9) LED Light
+10) 2 9v batteries, a plastic pipe, and some jumper wires
