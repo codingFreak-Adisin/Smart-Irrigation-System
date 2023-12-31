@@ -1,4 +1,4 @@
-#include <LiquidCrystal_I2C.h>
+#include <LiquidCrystal_I2C.h> // Using LCD package, to display water level on LCD Display
 #include "DHT.h" // Using the DHT module to check temperature and humidity
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 #define DHTPIN 2 
@@ -8,7 +8,7 @@ DHT dht(DHTPIN, DHTTYPE);
 int led = 13; // Declaring the LED - For testing bluetooth module
 int data; // To receive the bluetooth data
 int relay = 6; // Digital pin 6 alloted for relay
-int ldrPin = A1;
+int ldrPin = A1; // Light Dependent Resistor - Analog pin
 int ldrled = 7;
 
 void setup() {
@@ -36,22 +36,21 @@ void loop() {
   // Used for bluetooth module testing
   
     while(Serial.available() > 0)
-  {
-    data = Serial.read();
-    // Serial.println(data);
+      {
+        data = Serial.read();
+        // Serial.println(data);
 
-     if(data == 'e')
-    {
-      digitalWrite(led, HIGH); // If the data recieved is equal to e then turn on the light on pin 13
-    }
-    else if(data == 'f') // If the data recieved is equal to f then turn off the light on pin 13
-    {
-      digitalWrite(led, LOW);
-    } 
+        if(data == 'e'){
+            digitalWrite(led, HIGH); // If the data recieved is equal to e then turn on the light on pin 13 
+        }
+            
+        else if(data == 'f') // If the data recieved is equal to f then turn off the light on pin 13{
+            digitalWrite(led, LOW);
+        } 
     
-  }
+      }
 
-// This is for Light Sensor or (LDR - Light Dependent Resi)
+// This is for the Light Sensor or (LDR - Light Dependent Resistor)
   int ldrdata = analogRead(ldrPin);
   Serial.println("");
   Serial.print("Light Sensor ");
