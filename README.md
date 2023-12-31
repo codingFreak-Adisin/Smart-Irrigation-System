@@ -27,4 +27,3 @@ Components Used:
 11) 2 9v batteries, a plastic pipe, and some jumper wires
 
 ![Smart_Irrigation_System_Design(Schematic)_New_V2](https://github.com/codingFreak-Adisin/Smart-Irrigation-System/assets/70958307/58368eba-50d5-4e44-a889-fbd46faeab71)
-![WhatsApp Image 2023-12-28 at 17 24 33 (1)](https://github.com/codingFreak-Adisin/Smart-Irrigation-System/assets/70958307/20619984-fc1f-4797-91dd-5ff12acd7419)
